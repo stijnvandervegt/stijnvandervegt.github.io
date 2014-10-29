@@ -1,0 +1,69 @@
+body {margin: 30px;}
+.icon {
+  position: relative;
+  display: block;
+  float: left;
+  margin: .625em;
+  
+  &::before,
+  &::after {    
+    content: "";
+    position: absolute;
+  }
+}
+// Home
+.icon_home {
+  border-bottom: .938em solid white;
+  border-left: .938em solid transparent;
+  border-right: .938em solid transparent;
+  margin-left: 1.875em;
+  
+  &::before {
+    width: .563em;
+    height: .625em;
+    background: white;
+    margin: .938em 0 0 -.688em;
+  }
+  
+  &::after {
+    width: .563em;
+    height: .625em;
+    background: white ;
+    margin: .938em 0 0 .125em;
+  }
+}
+
+// Search
+.icon_search {
+  width: .75em;
+  height: .75em;
+  background: black;
+  border: .25em solid white;
+  margin-left: .938em;
+  @include border-radius(.625em);
+  
+  &::before {
+    width: .25em;
+    height: .875em;
+    margin: .5em 0 0 -.375em;
+    background: white;
+    @include rotate(45deg);
+  }
+}
+
+// Arrow Down
+@mixin icon-down($px, $color) {
+	width: 0; 
+	height: 0; 
+	border-left: $px solid transparent;
+	border-right: $px solid transparent;	
+	border-top: $px solid $color;
+}
+@mixin icon-right($px, $color) {
+  width: 0; 
+  height: 0; 
+  border-left: $px solid $color;
+  border-right: $px solid transparent;  
+  border-top: $px solid transparent;
+  border-bottom: $px solid transparent;
+}

@@ -1,0 +1,29 @@
+section.movie {
+	article {
+		background:$white;
+		margin:15px;
+		border:1px solid #ddd;
+		padding:20px;		
+		header {
+			margin-bottom:10px;
+			h2 {
+				font-weight:200;
+				font-size:24px;
+			}
+			em {
+				font-size:12px;
+				display:block;
+			}
+		}
+		figure {	
+			margin-bottom:10px;		
+			img {
+				border:3px solid $black;
+			}
+		}
+		&:after {
+			@include clearfix();
+		}
+	}
+
+}

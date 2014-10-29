@@ -1,0 +1,15 @@
+h1, h2 {
+	font-family: Verdana, Geneva, sans-serif;	
+}
+h1 {
+	font-size: $fontSizeTitle;
+	color: $white;
+}
+h2 {
+	font-size: 16px;
+}
+p, a, td, li {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size:$fontSize;
+}
+

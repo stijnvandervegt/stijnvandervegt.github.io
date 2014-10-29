@@ -1,0 +1,29 @@
+@mixin box-sizing($val) {	
+	-webkit-box-sizing: $val;
+	-moz-box-sizing: $val;
+	box-sizing: $val;
+	
+}
+@mixin border-radius($radius) {	
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+@mixin rotate($val) {
+	-ms-transform: rotate(7deg); /* IE 9 */
+    -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+    transform: rotate(7deg);
+}
+@mixin transition($val) {
+	transition: $val;
+	-webkit-transition: $val;
+	-moz-transition: $val;
+}
+
+@mixin clearfix(){
+	content: ".";
+	visibility: hidden;
+	display: block;
+	height: 0;
+	clear: both;
+} 

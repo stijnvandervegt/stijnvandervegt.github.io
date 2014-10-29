@@ -1,0 +1,19 @@
+@import 'helpers/mixins',
+		'helpers/variables',
+		'helpers/icons',
+		'helpers/utils',
+		'helpers/loader';
+
+@import 'base/reset',
+		'base/typography', 
+		'base/main';
+
+@import 'layout/header',
+		'layout/main';
+
+@import 'components/filters',
+		'components/nav',
+		'components/buttons';
+
+@import 'pages/movies';
+

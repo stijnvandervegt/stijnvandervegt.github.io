@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MovieApp</title>
+		<link href="static/css/style.css" type="text/css" rel="stylesheet">		
+	</head>
+	<body>
+		
+		<header class="top">
+		 	<a href="/eindopdracht/static/">
+		 		<i class="icon icon_home"></i>		 		
+		 		
+		 	</a>			
+
+		</header>
+			<a class="btn_nav" href="">Go To...</a>
+			<nav class="global hide">
+	        	<a href="#/about" data-page="about">About</a>
+	        	<a href="#/movies" data-page="movies">Movies</a>        	
+	        </nav>
+
+		
+		<div class="main">
+
+		</div>
+
+		<script type="text/html" id="about">
+
+			<section class="about">			    
+		        <h1>About</h1>
+		        <article class="content">	
+		        	<p>text about</p>
+		        </article>			    
+			</section>
+
+		</script>
+
+		<script type="text/html" id="moviesPage">
+
+			<section class="movie">
+			    <div class="tools hide"></div>
+			    <a class="btn_filter" href="">
+		        	filter
+		       	</a>
+		       	<input type="text" class="search" name="s" value="" placeholder="Search movies">
+			    <h1>Movies</h1>
+
+			    <div class="sort">
+			    	<a href="" data-order="desc">Sort by rate</a>
+			    </div>
+			    <section class="movie_container">
+				     
+				</section>				    
+			</section>
+
+		</script>
+
+		<script type="text/html" id="movies">
+			<% if(movies.length > 0) { %>
+			<% _.each(movies, function(item, key) { %>			      
+			    <article>
+			        <header>
+			            <h2><%= item.title %></h2>
+			            <em>Release date: <time><%= item.release_date %></time></em>
+			            <em>Review rate: <time><%= item.reviews %></time></em>
+			            <em>Genres: <%= item.genre %></em>
+			        </header>
+			        <figure>
+			            <img src="<%= item.cover %>" alt="<%= item.title %>">
+			        </figure>
+			        <p><%= item.simple_plot %></p>
+			        <a href="/eindopdracht/static/#/movies/<%= item.id %>" class="btn readmore">Meer info</a>
+			    </article>
+			<% }) %>
+			<% } else { %>
+				<article><p>No movies found</p></article>
+			<% } %>
+		</script>
+		<script type="text/html" id="singleMovie">
+			<section class="single">
+				<a class="back" href="/eindopdracht/static/#/movies" class="btn back">Go Back</a> 
+				<h1><%= title %></h1>
+				
+				
+				<article class="content">				
+					<h2>Info</h2>
+						<ul>
+							<li>Release date: <time><%= release_date %></time></li>				        
+					        <li>Genres: <%= genres %></li>
+					        <li>Director: <%= directors[0].name %></li>
+				        </ul>
+					</header>
+					<h2>Plot</h2>
+					<p><%= plot %></p>
+					
+					<h2>Actors</h2>
+					<ul>
+					<% _.each(actors, function(item, key) { %>	
+						<li>
+							<h3><a href="<%= item.url_profile %>" target="_blank"><%= item.actor_name %></a></h3>
+							<em>Character: <a href="<%= item.url_character %>" target="_blank"> <%= item.character %></a></em>
+							<figure>
+								<img src="<%= item.url_photo %>" alt="<%= item.actor_name %>" />
+							</figure>
+						</li>
+					<% }) %>
+					</ul>
+				</article>
+			</section>
+		</script>
+
+		<script type="text/html" id="genres">
+		 	<div class="filter">
+		        <% _.each(genres, function(item) { %>
+		        <a href="#" class="" data-value="<%= item %>"><%= item %></a>
+		        <% }) %>
+		     </div>
+		</script>
+
+		<script type="text/html" id="loader">
+			<div class="loader">Loading...</div>
+		</script>
+
+		<script src="static/js/all.min.js" type="text/javascript"></script>
+
+	</body>
+</html>

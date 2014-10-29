@@ -1,0 +1,27 @@
+.tools {
+	background:$blue;
+	padding:20px 20px 10px 20px;
+	width:100%;
+	text-align:center;
+	&.hide {
+		display:none;
+	}	
+	a {
+		padding:4px 7px;
+		background:$white;
+		@include border-radius(3px);
+		color:$fontColor;
+		text-decoration:none;
+		margin-bottom:10px;
+		display:inline-block;
+		&.active {
+			background: $green;
+			color:$white;
+		}
+	}
+}
+
+.search {
+	padding:5px;
+	width:65%;	
+}

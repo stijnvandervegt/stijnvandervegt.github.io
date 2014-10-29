@@ -1,0 +1,23 @@
+{
+  "name": "satnav",
+  "main": [
+    "lib/satnav.js"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "dependencies": {},
+  "homepage": "https://github.com/f5io/satnav-js",
+  "_release": "658cfbe860",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "658cfbe860fb0ea66b175c0ecebc72afd000f284"
+  },
+  "_source": "git://github.com/f5io/satnav-js.git",
+  "_target": "*",
+  "_originalSource": "satnav",
+  "_direct": true
+}

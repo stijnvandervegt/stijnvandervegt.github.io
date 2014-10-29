@@ -1,0 +1,49 @@
+.btn {
+	padding:10px;
+}
+.btn_filter, .sort a {
+	float:right;
+	display:block;
+	padding: 9px 38px 9px 19px;
+	color: $white;
+	text-decoration: none;
+	background:$blue;
+	@include border-radius(0 0 5px 5px);
+	&:after {
+		@include icon-down(5px, $white);
+		content: '';		
+		left: auto;
+		margin: -10px 0 0;
+		position: absolute;
+		right: 15px;
+			
+	}
+}
+
+.sort {
+	margin-right:15px;
+	a {
+		@include border-radius(5px);
+		&:after {
+			margin: 5px 0 0;
+			right:25px;
+		}
+	}
+} 
+
+.btn.readmore {
+	float:right;
+	text-decoration:none;
+	color:$white;
+	background:$blue;
+	padding:5px 15px 5px 7px;
+	@include border-radius(5px);
+	&:after {
+		@include icon-right(5px, $white);
+		content: '';		
+		left: auto;
+		margin: 3px 0 0 5px;
+		position: absolute;
+		
+	}
+}
